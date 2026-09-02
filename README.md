@@ -529,3 +529,379 @@ By combining **patient flow, treatment demand, departmental workload, bed utiliz
 
 
 
+# 🏥 Milestone 3 — Resource Utilization & Capacity Intelligence
+
+> **Healthcare Resource Analytics | Capacity Planning | Power BI Dashboard Module**
+
+## 📌 Overview
+
+**Milestone 3** focuses on developing a **Resource Utilization & Capacity Intelligence Module** for healthcare operations.
+
+The objective is to analyze how effectively critical hospital resources such as **beds and doctors** are being utilized and to identify departments experiencing potential **capacity or workload pressure**.
+
+Using interactive **Power BI dashboards, KPIs, DAX measures, and analytical visualizations**, the module transforms hospital operational data into actionable insights that can support **resource planning, staffing decisions, and capacity management**.
+
+The analysis follows the operational flow:
+
+**Resource Utilization → Capacity Pressure → Departmental Needs → Resource Planning**
+
+---
+
+## 🎯 Objectives
+
+The primary objectives of this milestone are to:
+
+* 🛏️ Evaluate bed utilization across hospital departments.
+* 👨‍⚕️ Analyze patient workload per doctor.
+* 🚨 Identify departments experiencing potential resource pressure.
+* 📊 Detect areas of high or low resource utilization.
+* 🎯 Compare resource utilization against predefined operational benchmarks.
+* 👥 Support informed staffing and workload decisions.
+* 🏥 Support hospital capacity and resource planning.
+* 🔄 Identify opportunities for better resource allocation.
+
+---
+
+# ❓ Key Business Questions
+
+The dashboard was designed to answer important healthcare resource-management questions:
+
+1. Which departments are closest to bed-capacity pressure?
+2. How does bed utilization vary across departments?
+3. How many patients are being handled per doctor?
+4. Which departments may require additional resources?
+5. Are hospital resources consistently utilized?
+6. Which resources or departments may be underutilized?
+7. Which departments show potential staffing pressure?
+8. Which departments show potential bed-capacity pressure?
+9. How can resource utilization be improved across departments?
+
+---
+
+# 📊 Dashboard Structure
+
+The Resource Utilization & Capacity Intelligence module consists of **three analytical dashboard pages**.
+
+---
+
+# 1️⃣ Resource Overview
+
+### 📌 Purpose
+
+The **Resource Overview** page provides a high-level summary of hospital resource utilization.
+
+It enables management to quickly understand the overall utilization of beds and the distribution of patient workload across doctors.
+
+### 📈 Key Performance Indicators
+
+| KPI                                         | Purpose                                                       |
+| ------------------------------------------- | ------------------------------------------------------------- |
+| 🛏️ **Overall Bed Utilization %**           | Measures overall hospital bed utilization                     |
+| 📊 **Highest Department Bed Utilization %** | Identifies the department with the highest bed utilization    |
+| 👨‍⚕️ **Average Patients per Doctor**       | Measures average patient workload per doctor                  |
+| 🚨 **High Bed-Utilization Departments**     | Counts departments crossing the defined utilization threshold |
+
+### 📊 Visualizations
+
+#### Bed Utilization by Department
+
+Compares bed utilization across departments and highlights departments operating closer to their available capacity.
+
+#### Patient / Doctor Workload Analysis
+
+Shows the relationship between patient volume and available doctors across departments.
+
+### 🎯 Key Question Answered
+
+> **"How effectively are hospital resources being utilized across departments?"**
+
+---
+
+# 2️⃣ Resource Pressure Analysis
+
+### 📌 Purpose
+
+This page combines **bed utilization and doctor workload** to provide a more comprehensive view of departmental resource pressure.
+
+Instead of evaluating a single metric, the dashboard uses a **Department Resource Pressure Matrix** to identify different types of operational pressure.
+
+---
+
+## 📊 Department Resource Pressure Matrix
+
+A scatter plot is used to compare two important operational indicators:
+
+* **X-axis:** Bed Utilization %
+* **Y-axis:** Patients per Doctor
+* **Each Point:** Represents an individual department
+
+Operational benchmarks divide departments into four analytical zones.
+
+### 🔎 Pressure Classification
+
+| Condition                                           | Interpretation                               |
+| --------------------------------------------------- | -------------------------------------------- |
+| 🔴 **High Bed Utilization + High Patient Workload** | Potential pressure on both beds and staffing |
+| 🟠 **High Bed Utilization + Low Patient Workload**  | Potential bed-capacity pressure              |
+| 🟡 **Low Bed Utilization + High Patient Workload**  | Potential staffing or workload pressure      |
+| 🟢 **Low Bed Utilization + Low Patient Workload**   | Relatively lower resource pressure           |
+
+### 💡 Why This Analysis Matters
+
+The matrix helps management understand **not only whether a department has potential pressure, but also what type of resource may be contributing to it**.
+
+For example:
+
+> A department with high bed utilization but relatively low patient workload per doctor may require closer attention to **bed capacity rather than staffing**.
+
+Similarly:
+
+> A department with lower bed utilization but very high patients per doctor may require a **staffing or workload review**.
+
+---
+
+# 3️⃣ Capacity & Overload Analysis
+
+### 📌 Purpose
+
+The final dashboard focuses on identifying **over-utilized and under-utilized resources**.
+
+This helps management understand where hospital capacity may need to be:
+
+**Increased → Redistributed → Optimized → Monitored**
+
+### 🎯 Operational Applications
+
+The analysis can support decisions such as:
+
+* 🛏️ Increasing bed availability in high-pressure departments.
+* 👨‍⚕️ Reviewing staffing levels where patient workload is high.
+* 📊 Identifying departments with available spare capacity.
+* 🔄 Redistributing resources where operationally appropriate.
+* 🚨 Monitoring departments repeatedly approaching utilization thresholds.
+* 📈 Supporting future capacity planning decisions.
+
+---
+
+# 🔍 Key Insight
+
+A major insight from this analysis is that **a single resource metric is not sufficient to understand operational pressure**.
+
+For example:
+
+### 🛏️ High Bed Utilization + Lower Patient/Doctor Workload
+
+This combination may indicate that **bed capacity** is the more important area requiring attention rather than doctor staffing.
+
+### 👨‍⚕️ Lower Bed Utilization + High Patient/Doctor Workload
+
+This combination may indicate potential **staffing or workload pressure**, even though sufficient bed capacity may be available.
+
+### 🚨 High Bed Utilization + High Patient/Doctor Workload
+
+This represents the most significant potential pressure zone because both **bed capacity and staffing workload** may require attention.
+
+Therefore, combining:
+
+**Bed Utilization + Patient Workload + Operational Benchmarks**
+
+provides a more meaningful picture of **department-level resource pressure** than analyzing individual metrics separately.
+
+---
+
+# 📐 Operational Benchmark Framework
+
+The module uses predefined operational benchmarks to classify departments based on resource utilization.
+
+```text
+                    PATIENTS PER DOCTOR
+                           HIGH
+                            │
+          Staffing         │        Dual Resource
+          Pressure         │        Pressure
+                            │
+────────────────────────────┼────────────────────────
+                            │
+       Lower Resource       │        Bed Capacity
+          Pressure          │        Pressure
+                            │
+                           LOW
+                     BED UTILIZATION
+              LOW                    HIGH
+```
+
+This framework enables management to move from simple monitoring toward **structured capacity intelligence**.
+
+---
+
+# 🛠️ Tools & Technologies
+
+| Technology                    | Usage                                    |
+| ----------------------------- | ---------------------------------------- |
+| 🟨 **Microsoft Power BI**     | Interactive dashboard development        |
+| 📐 **DAX**                    | KPI calculations and analytical measures |
+| 📄 **CSV / Hospital Dataset** | Operational data source                  |
+| 🎯 **KPI Cards**              | Resource performance monitoring          |
+| 📊 **Bar Charts**             | Department-level comparisons             |
+| 🔵 **Scatter Plot**           | Resource pressure analysis               |
+| 🎯 **Operational Benchmarks** | Pressure-zone classification             |
+| 📈 **Interactive Filters**    | Dynamic analysis                         |
+
+---
+
+# 📂 Project Structure
+
+```text
+Milestone-3/
+│
+├── 📊 PowerBI/
+│   └── Resource_Utilization_Capacity_Intelligence.pbix
+│
+├── 📁 Dataset/
+│   └── hospital_medical_operations.csv
+│
+├── 📸 Dashboard_Screenshots/
+│   ├── resource_overview.png
+│   ├── resource_pressure_analysis.png
+│   └── capacity_overload_analysis.png
+│
+└── 📄 README.md
+```
+
+> Update the filenames according to the actual files available in the repository.
+
+---
+
+# 📈 Analytical Flow
+
+The complete analytical process can be represented as:
+
+```text
+Hospital Operational Dataset
+             │
+             ▼
+     Resource Data Analysis
+             │
+             ▼
+       DAX Calculations
+             │
+             ▼
+     Resource KPIs & Metrics
+             │
+             ▼
+    ┌────────────────────────┐
+    │    Resource Overview   │
+    ├────────────────────────┤
+    │ Resource Pressure      │
+    │ Analysis               │
+    ├────────────────────────┤
+    │ Capacity & Overload    │
+    │ Analysis               │
+    └────────────────────────┘
+             │
+             ▼
+    Operational Classification
+             │
+             ▼
+     Capacity Intelligence
+             │
+             ▼
+     Resource Planning
+```
+
+---
+
+# 🎯 Expected Outcome
+
+The **Resource Utilization & Capacity Intelligence Module** provides hospital management with a centralized view of:
+
+> **Resource Utilization → Capacity Pressure → Departmental Needs → Resource Planning**
+
+The dashboards transform raw operational data into actionable capacity intelligence by helping identify:
+
+* Departments approaching high bed utilization.
+* Patient workload per doctor.
+* Potential staffing pressure.
+* Potential bed-capacity pressure.
+* Underutilized resources.
+* Departments requiring closer monitoring.
+* Opportunities for resource redistribution.
+* Areas requiring future capacity planning.
+
+---
+
+# 💼 Business Impact
+
+This milestone demonstrates how **Business Intelligence and Data Analytics** can support healthcare resource management.
+
+Rather than analyzing beds or staffing independently, the module combines multiple operational indicators to provide a **multi-dimensional view of resource pressure**.
+
+### From Data → Intelligence → Planning
+
+```text
+Raw Operational Data
+        ↓
+Resource Utilization Analysis
+        ↓
+KPI & DAX Measures
+        ↓
+Department Comparison
+        ↓
+Resource Pressure Matrix
+        ↓
+Capacity Intelligence
+        ↓
+Staffing & Capacity Planning
+```
+
+This approach can help management make more informed decisions regarding **bed capacity, staffing, workload distribution, and resource allocation**.
+
+---
+
+# 🚀 Future Enhancements
+
+Potential future improvements include:
+
+* 🔮 Bed occupancy forecasting.
+* 👨‍⚕️ Doctor workload forecasting.
+* 📈 Predictive resource-demand analysis.
+* 🚨 Automated capacity-pressure alerts.
+* 🛏️ Dynamic bed-capacity recommendations.
+* 👥 Staff requirement forecasting.
+* 🤖 Machine Learning-based resource optimization.
+* 📊 Real-time hospital resource monitoring.
+* 🔄 Automated resource allocation recommendations.
+
+---
+
+# 🧠 Key Takeaway
+
+> **Resource utilization should not be evaluated using a single metric.**
+
+By combining **bed utilization, patient workload, departmental capacity, and operational benchmarks**, the module provides a more comprehensive understanding of where hospital resources may be under pressure.
+
+The result is a shift from:
+
+**"How much are our resources being used?"**
+
+to:
+
+**"Where is resource pressure occurring, what may be causing it, and where should management focus?"**
+
+---
+
+# 👩‍💻 Project Focus
+
+This milestone demonstrates practical application of:
+
+**Healthcare Analytics • Resource Utilization • Capacity Intelligence • Power BI • DAX • Data Visualization • KPI Development • Operational Benchmarking • Capacity Planning • Business Intelligence**
+
+---
+
+## ⭐ Conclusion
+
+Milestone 3 transforms hospital operational data into a **Resource Utilization & Capacity Intelligence solution**.
+
+By combining **bed utilization, doctor workload, departmental capacity, and operational benchmarks**, the dashboard provides management with a structured way to identify potential pressure areas and support better resource planning.
+
+> **Turning hospital resource data into capacity intelligence for smarter operational planning.** 🏥📊
