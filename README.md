@@ -905,3 +905,144 @@ Milestone 3 transforms hospital operational data into a **Resource Utilization &
 By combining **bed utilization, doctor workload, departmental capacity, and operational benchmarks**, the dashboard provides management with a structured way to identify potential pressure areas and support better resource planning.
 
 > **Turning hospital resource data into capacity intelligence for smarter operational planning.** 🏥📊
+
+
+## 📍 Milestone 4 — Geographical Analysis & Final Executive Dashboard
+
+### 🎯 Objective
+
+The objective of **Milestone 4** was to extend the hospital analytics solution with **geographical demand analysis** and integrate the key insights generated across the previous milestones into a comprehensive **executive-level Power BI dashboard**.
+
+This milestone focuses on understanding the geographical distribution of patient demand, identifying high-demand regions, and presenting critical hospital performance and resource utilization insights from a management perspective.
+
+---
+
+### 🌍 Geographical Analysis
+
+The available geographical attributes in the healthcare dataset were used to analyze patient demand across different locations.
+
+Since the dataset contains **City** and **State** information but does not include latitude/longitude or district-level geographical data, the geographical analysis was performed at the **city and state levels**.
+
+This approach enables the identification of major geographical patterns in patient demand while remaining consistent with the available dataset.
+
+---
+
+### ❓ Key Business Questions
+
+The geographical analysis was designed to answer the following business questions:
+
+- Which states have the highest patient demand?
+- Which cities contribute the highest patient volume?
+- How is patient demand distributed across different states?
+- Which regions may require greater healthcare resources?
+- What are the major geographical patterns in patient demand?
+- How does geographical demand relate to available hospital capacity?
+
+---
+
+### 📊 Geographical Dashboard Components
+
+The **Geographical Analysis** page includes the following visualizations and analytical components:
+
+| Dashboard Component | Purpose |
+|---|---|
+| **Patient Volume by State** | Identifies states contributing the highest number of patients. |
+| **Top 10 Cities by Patient Volume** | Highlights cities with the highest patient demand. |
+| **Bed Type Demand by State** | Compares demand for different bed types across high-demand states. |
+| **Gender Distribution by State** | Provides demographic distribution across major states. |
+| **Geographical Demand Analysis** | Provides a location-based view of patient demand using available city and state information. |
+| **Interactive Filters** | Enables users to explore geographical patterns using State, Year, and Gender filters. |
+
+---
+
+### 🏥 Final Executive Dashboard Integration
+
+The final dashboard integrates the important analyses developed throughout the previous milestones into a **unified Power BI solution** rather than treating each milestone as an independent output.
+
+The integrated dashboard brings together:
+
+- Patient demand and admission analysis
+- Treatment and service demand
+- Hospital resource utilization
+- Bed utilization
+- Workforce deployment
+- Patients per doctor
+- Capacity and overload analysis
+- Geographical patient demand
+- Key operational KPIs
+
+This integrated approach provides a consolidated view of hospital operations and enables management to analyze demand, capacity, and resource utilization together.
+
+---
+
+### 💡 Executive-Level Insights
+
+The final dashboard enables hospital management to quickly identify:
+
+- High-demand states and cities
+- Departments experiencing higher resource pressure
+- Bed utilization levels across departments
+- Departments with higher patient-to-doctor workload
+- Potential areas requiring additional resources
+- Geographic concentration of patient demand
+- Differences between patient demand and available operational capacity
+- Areas with potential capacity or resource constraints
+
+These insights can support data-driven understanding of hospital performance and help identify areas requiring further operational attention.
+
+---
+
+### 🎨 Dashboard Design
+
+The final Power BI report was designed from an **executive and management perspective**, with emphasis on clarity, usability, and prioritization of important insights.
+
+Key design principles include:
+
+- Clear and meaningful KPI cards
+- Business-focused visualizations
+- Interactive slicers and filters
+- Geographical analysis
+- Resource utilization indicators
+- Capacity and overload analysis
+- Consistent dashboard navigation
+- Logical organization of information
+- Reduced visual clutter
+- Prioritization of high-value business insights
+
+---
+
+### ✅ Dashboard Validation
+
+The final Power BI dashboard was validated to ensure the accuracy, consistency, and usability of the analytical outputs.
+
+The following validation checks were performed:
+
+- KPI calculations produce correct results.
+- Filters interact correctly with the relevant visuals.
+- Date and geographical filters work as expected.
+- Visualizations accurately represent the underlying dataset.
+- Resource utilization and capacity metrics remain consistent.
+- Dashboard interactions function as intended.
+- Key insights are understandable from a hospital management perspective.
+
+---
+
+## 🏆 Milestone 4 Outcome
+
+Milestone 4 completes the hospital analytics solution by integrating **patient demand, clinical and service utilization, resource utilization, capacity intelligence, and geographical analysis** into a unified **Power BI executive dashboard**.
+
+The final dashboard provides a management-oriented view of hospital operations and enables stakeholders to:
+
+- Understand geographical patterns in patient demand
+- Identify high-demand states and cities
+- Monitor hospital resource utilization
+- Evaluate bed and workforce pressure
+- Identify potential capacity constraints
+- Compare demand with available operational resources
+- Support data-driven operational decision-making
+
+### 📌 Final Outcome
+
+The completion of Milestone 4 represents the transition from individual analytical modules to a **comprehensive hospital operations intelligence solution**, bringing together data-driven insights across **demand, resources, capacity, workforce, financial performance, and geography**.
+
+---
