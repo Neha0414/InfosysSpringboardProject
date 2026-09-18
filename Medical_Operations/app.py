@@ -2,13 +2,14 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 from datetime import date
+from pathlib import Path
 
 # ---------- PAGE CONFIG ----------
 st.set_page_config(page_title="Hospital Operations Dashboard", layout="wide")
 
 # ---------- LOAD DATA (kept in session_state so edits persist across interactions) ----------
 if "df" not in st.session_state:
-    df_init = pd.read_csv("medical_operations_dashboard_cleaned.csv")
+    df_init = pd.read_csv(Path(__file__).parent / "medical_operations_dashboard_cleaned.csv")
     df_init["Admission_Date"] = pd.to_datetime(df_init["Admission_Date"], errors="coerce")
     df_init["Discharge_Date"] = pd.to_datetime(df_init["Discharge_Date"], errors="coerce")
     st.session_state.df = df_init
