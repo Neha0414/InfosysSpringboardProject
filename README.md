@@ -1041,6 +1041,10 @@ The final dashboard provides a management-oriented view of hospital operations a
 - Compare demand with available operational resources
 - Support data-driven operational decision-making
 
+  ## Live Dashboard
+
+[View Healthcare Operations Dashboard](https://medical-operations-dashboardgit-me5eunufwuk9efvkjkmrmz.streamlit.app/)
+
 ### 📌 Final Outcome
 
 The completion of Milestone 4 represents the transition from individual analytical modules to a **comprehensive hospital operations intelligence solution**, bringing together data-driven insights across **demand, resources, capacity, workforce, financial performance, and geography**.
